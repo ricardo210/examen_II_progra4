@@ -1,0 +1,18 @@
+<template name="navbar">
+  <nav class = "blue darken-4">
+    <div class="nav-wrapper">
+          <li class style="padding-left:10px"><img clase = "responsive-img" src="images/spacebook.jpg" href="/" height = "64" width = "200">
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <!-- <li>{{>loginButtons align="right"}}</li> -->
+        {{#if currentUser}}
+          <li><a href="/" id="logout" class="waves-effect waves-light btn cyan">Logout</a></li>
+          <li><a href="/listing" class="waves-effect waves-light btn cyan">Your Timeline</a></li>
+        {{else}}
+          <li><a href="/register" class="waves-effect waves-light btn cyan">Register</a></li>
+          <li><a href="/login" class="waves-effect waves-light btn cyan">Login</a></li>
+        {{/if}}
+      </ul></li>
+      
+    </div>
+  </nav>
+</template>

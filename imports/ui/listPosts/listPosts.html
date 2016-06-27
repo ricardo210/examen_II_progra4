@@ -1,0 +1,52 @@
+<template name="listPosts">
+  <div class="row">
+    <div class="container">
+      {{#each posts}}
+      <ul>
+        <li>
+           <div class="offset-s3 col s12 m6">
+             <div class="card black">
+               <div class="card-content white-text">
+                 <span class="card-title">{{creator}}</span>
+                 <p>{{description}}</p>
+               </div>
+               <div class="card-action">
+                 <a href="" class="right-align delete"><i class="material-icons">delete</i></a>
+               </div>
+             </div>
+           </div>
+        </li>
+      </ul>
+      {{/each}}
+    </div>
+  </div>
+  <div class="container center">
+    <div class="row">
+      <div class="offset-s3 col s6">
+        <a href="#addClassDialog" class="modal-trigger waves-effect waves-light btn cyan"><i class="material-icons right">add</i>What's New?</a>
+      </div>
+    </div>
+  </div>
+    <div id="addClassDialog" class="modal modal-fixed-footer cyan lighten-5 grey-text">
+        <div class="modal-content">
+        <h1>Post</h1>
+        <p>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                          <i class="material-icons prefix">description</i>
+                          <textarea id="description" class="materialize-textarea"></textarea>
+                          <label for="description">New Status</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </p>
+        </div>
+        <div class="modal-footer cyan lighten-4">
+          <a class="modal-action modal-close waves-effect waves-red btn-flat grey-text">Cancel</a>
+          <a id="addPostButton" class="modal-action modal-close waves-effect waves-green btn-flat grey-text">Add</a>
+        </div>
+    </div>
+</template>
