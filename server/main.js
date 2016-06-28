@@ -1,5 +1,6 @@
 import { Meteor } from 'meteor/meteor';
-import { Posts } from '../imports/api/post.js';
+import { Ingredients2 } from '../imports/api/ingredients.js';
+import { Recipies2 } from '../imports/api/recipies.js';
 
 Meteor.startup(() => {
 
@@ -7,6 +8,6 @@ Meteor.startup(() => {
 
 let seedPosts = () => {
   return [
-    
+
   ]
 }

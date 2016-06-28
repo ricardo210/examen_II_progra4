@@ -1,6 +1,8 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
-import { Posts } from '../imports/api/post.js';
+import { Ingredients2 } from '../imports/api/ingredients.js';
+import { Recipies2 } from '../imports/api/recipies.js';
+
 
 import "../imports/routes/router.js";
 import './main.html';

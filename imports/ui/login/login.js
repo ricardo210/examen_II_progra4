@@ -3,11 +3,10 @@ import "./login.html";
 Template.login.events({
   "click #login"(event){
       var User = {
-        username: $("#emailInput").val(),
-        email: $("#emailInput").val(),
+        username: $("#usernameInput").val(),
         password: $("#passwordInput").val()
       }
-      Meteor.loginWithPassword($("#emailInput").val(), $("#passwordInput").val(), function(error){
+      Meteor.loginWithPassword($("#usernameInput").val(), $("#passwordInput").val(), function(error){
       });
   }
 });

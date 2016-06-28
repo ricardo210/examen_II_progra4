@@ -1,4 +1,4 @@
-export const Posts = new Mongo.Collection('posts');
+export const Recipies2 = new Mongo.Collection('posts');
 
 let Schema = {};
 Schema.post = new SimpleSchema({
@@ -6,7 +6,7 @@ Schema.post = new SimpleSchema({
     type: String,
     max: 100
   },
-  creator: {
+  name: {
     type: String,
     max: 100
   }
@@ -19,13 +19,13 @@ Meteor.methods({
   'posts.insert'(post){
       Posts.insert(post, function(err){
         if(err)
-          throw new Meteor.Error('Error inserting post: ' + err);
+          throw new Meteor.Error('Error inserting recipies: ' + err);
       });
    },
    'posts.remove'(_id){
      Posts.remove({_id: _id}, function(err){
        if(err)
-        throw new Meteor.Error('Error removing post from your biography: ' + err);
+        throw new Meteor.Error('Error removing your recipe: ' + err);
      });
    }
 })

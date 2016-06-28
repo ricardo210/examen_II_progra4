@@ -7,7 +7,8 @@
            <div class="offset-s3 col s12 m6">
              <div class="card white">
                <div class="card-content black-text">
-                 <span class="card-title">{{creator}}</span>
+                 <span class="card-title">Recipe</span>
+                 <p>{{name}}</p>
                  <p>{{description}}</p>
                </div>
                <div class="card-action">
@@ -23,11 +24,40 @@
   <div class="container center">
     <div class="row">
       <div class="offset-s3 col s6">
-        <a href="#addClassDialog" class="modal-trigger waves-effect waves-light btn green"><i class="material-icons right">add</i>What's New?</a>
+        <a href="#addRecipeDialog" class="modal-trigger waves-effect waves-light btn green"><i class="material-icons right">add</i>Add new ingredients</a>
       </div>
     </div>
   </div>
-    <div id="addClassDialog" class="modal modal-fixed-footer green lighten-5 blue-text">
+  <div class="container center">
+    <div class="row">
+      <div class="offset-s3 col s6">
+        <a href="#addingredientDialog" class="modal-trigger waves-effect waves-light btn green"><i class="material-icons right">add</i>Add new recipies</a>
+      </div>
+    </div>
+  </div>
+    <div id="addRecipeDialog" class="modal modal-fixed-footer green lighten-5 blue-text">
+        <div class="modal-content">
+        <h1>Post</h1>
+        <p>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                          <i class="material-icons prefix">description</i>
+                          <textarea id="description" class="materialize-textarea"></textarea>
+                          <label for="description">New Status</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </p>
+        </div>
+        <div class="modal-footer green lighten-4">
+          <a class="modal-action modal-close waves-effect waves-red btn-flat black-text">Cancel</a>
+          <a id="addPostButton" class="modal-action modal-close waves-effect waves-green btn-flat black-text">Add</a>
+        </div>
+    </div>
+    <div id="addingredientDialog" class="modal modal-fixed-footer green lighten-5 blue-text">
         <div class="modal-content">
         <h1>Post</h1>
         <p>

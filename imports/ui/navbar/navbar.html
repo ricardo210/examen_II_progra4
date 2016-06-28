@@ -1,12 +1,13 @@
 <template name="navbar">
   <nav class = "red darken-4">
     <div class="nav-wrapper">
-          <li class style="padding-left:10px"><img clase = "responsive-img" src="images/heisenberg2.jpg" href="/" height = "64" width = "200">
+          <li class style="padding-left:10px"><img clase = "responsive-img" src="images/heisenberg2.jpg" href="/" height = "64" width = "64">
           <ul id="nav-mobile" class="right hide-on-med-and-down">
         <!-- <li>{{>loginButtons align="right"}}</li> -->
         {{#if currentUser}}
           <li><a href="/" id="logout" class="waves-effect waves-light btn green">Logout</a></li>
-          <li><a href="/listing" class="waves-effect waves-light btn green">Your Timeline</a></li>
+          <li><a href="/listing" class="waves-effect waves-light btn green">See recipies</a></li>
+          <li><a href="/listing" class="waves-effect waves-light btn green">See ingredients</a></li>
         {{else}}
           <li><a href="/register" class="waves-effect waves-light btn green">Register</a></li>
           <li><a href="/login" class="waves-effect waves-light btn green">Login</a></li>
